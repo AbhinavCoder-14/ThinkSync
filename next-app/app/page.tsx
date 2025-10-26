@@ -1,13 +1,13 @@
-'use client';
-
 import { AppBar } from "@/components/AppBar";
 import Image from "next/image";
-import { useSession } from "next-auth/react";
+
+import { getServerSession } from "next-auth";
+import { options } from "./api/auth/[...nextauth]/options";
 
 
-export default function Home() {
+export default async function Home() {
   
-  const session = useSession();
+  const session = await getServerSession(options);
 
     
   return (
