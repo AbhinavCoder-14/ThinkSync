@@ -32,7 +32,7 @@ export const options : NextAuthOptions = {
 
                 const user = { id: "42", name: "Dave", password: "nextauth",role:"admin" }
 
-                if (credentials?.username === user.name && credentials?.password === user.password && credentials?.role) {
+                if (credentials?.username === user.name && credentials?.password === user.password && credentials?.role=== user.role) {
                     return user
                 } else {
                     return null
