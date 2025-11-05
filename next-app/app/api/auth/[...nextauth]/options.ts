@@ -229,10 +229,6 @@ export const options: NextAuthOptions = {
               };
             }
             
-
-
-            
-            
         }catch(e:any){
           console.log(e)
           return null
@@ -242,8 +238,8 @@ export const options: NextAuthOptions = {
     }
 
 
-        
-  ],
+    }),  
+],
   secret: process.env.NEXTAUTH_SECRET || "secr3t",
   callbacks: {
     async jwt({ token, user }) {
