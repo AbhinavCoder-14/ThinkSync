@@ -1,0 +1,17 @@
+version: '3.8'
+services:
+  db:
+    image: postgres:15-alpine
+    restart: always
+    environment:
+      # These variables are used by the Postgres image to initialize the DB
+      POSTGRES_USER: quiz-admin
+      POSTGRES_PASSWORD: mypassword
+      POSTGRES_DB: quiz-admin-db
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
